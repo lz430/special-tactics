@@ -1,0 +1,1097 @@
+/*--------------------------------------------------------------
+This is your custom stylesheet.
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+Make sure to respect the media queries! Otherwise you may
+accidentally add desktop styles to the mobile layout.
+
+You're the boss, so have fun editing!
+
+--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Global Styles
+2.0 - Responsive media queries (mobile styles)
+  2.1 - MAXIMUM width of 720 pixels (phones landscape)
+  2.2 - MAXIMUM width of 350 pixels (phones portrait)
+  2.3 - MINIMUM width of 721 pixels (tablets+)
+  2.4 - MINIMUM width of 1040 pixels (desktops and laptops)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 - Global Styles
+--------------------------------------------------------------*/
+
+/*Home page */
+body.home .entry-header, 
+body.page-template-page-no-buddypanel #comments { 
+  display: none;
+}
+body.home #content > article{
+  /*padding: 0;*/
+}
+body.home .equal-height-flex{
+  display: flex;
+  align-items: flex-end;
+}
+body.home .equal-height-flex .vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat{
+  min-height: 230px;
+  transition: all .3s ease;
+}
+body.home .equal-height-flex .vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat:hover{
+  background-color: #000 !important;
+}
+body.home .equal-height-flex .vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat:hover img{
+  transition: all .3s ease;
+  transform: scale(1.1,1.1);
+}
+body.home .wpcs_product_carousel_slider .product_image_container .product_thumb_link img{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 65%;
+  width: 50%;
+}
+body.home div.wps-slider-section #sp-woo-product-slider-9716 .wpsf-cart-button a{
+  display: block;
+  margin: 0 auto;
+}
+div.footer-inner-bottom{
+  background-color: #333;
+}
+body.home .wpb_heading.wpb_revslider_heading{
+  display: none;
+}
+body.home .ld-course-list-content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.ld-course-list-content{
+  margin-left: 0;
+}
+body.home #course-list-wrap .ld_course_grid_button{
+  margin-top: 30px;
+}
+
+/*Carousel*/
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-next, 
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-prev{
+  background: #ffb606;
+  border-radius: 5px 0 0 5px;
+  color: #000;
+  font-weight: bold;
+  padding: 15px;
+  transition: none;
+  opacity: 1;
+}
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-prev{
+  left: 0;
+}
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-nav .vc_grid-owl-next{
+  right: 0;
+}
+/*Footer*/
+.footer-widget{
+  float: none;
+  width: 100%;
+}
+.footer-widget .widget_nav_menu .menu li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 875px){
+  body.home .ld-course-list-content{
+    flex-wrap: wrap;
+  }
+}
+.uo-grid-wrapper{
+  display: flex;
+  float: none;
+  align-items: center;
+  justify-content: center;
+}
+body.logged-in#titlebar-search{
+  /*display: none;*/
+}
+/*Utilities*/
+.lms-post-content a.btn.large.shadow{
+  background: #ffb606;
+  color: #000;
+  font-size: 1.3em; 
+  font-weight: bold;
+  padding: 20px;
+  text-transform: uppercase;
+  width: auto;
+}
+.add_to_cart_button{
+  background: #ffb606 !important;
+  color: #000 !important;
+  font-size: 1em !important; 
+  font-weight: bold !important;
+  padding: 10px !important;
+  text-transform: uppercase !important;
+}
+#course-list-wrap dd.course_progress div.course_progress_blue{
+  background-color: #ffb606;
+}
+#learndash_profile #course_list h4>a.notcompleted:after,
+.ld-item .notcompleted:before,
+.learndash .notcompleted:before,
+.learndash .topic-notcompleted:before{
+  color: #ffb606;
+}
+.site-header .left-col .btn-container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.site-header .btn-elite,
+ #mobile-logo .btn-elite{
+  background: url(https://www.specialtactics.global/wp-content/uploads/2018/05/SpecialTactics-WordpressBTNHelmet01-050x046pix.png) no-repeat 10px center #000;
+  background-size: 25%;
+  border-radius: 5px;
+  color: #ffb606 !important;
+  display: inline-block;
+  font-size: 1rem;
+  max-width: 50%;
+  padding: 25px 10px 25px 53px; 
+  text-align: center;
+  text-transform: uppercase;
+}
+#mobile-logo .btn-container{
+  display: inline-block;
+  left: 50px;
+  position: absolute;
+  top: 0;
+}
+#mobile-logo .btn-elite{
+  background: #000;
+  padding: 7px 10px;
+}
+a.bb-course-link{
+  background: rgba(50, 50, 50, .7);
+}
+
+#course-details #btn-join{
+  background: #ffb606;
+  border: 0 none;
+  color: #000;
+}
+
+.equal-height-flex{
+  margin-top: -11%;
+  position: relative;
+}
+
+#masthead .pop-inner{
+  background: #333;
+}
+
+body.forum-archive div.wpcf7{
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+
+/*Coming soon*/
+.coming-soon .coverage{
+  background: rgba(100, 100, 100, .8);
+  height: 100%;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: calc(100% - 11px);
+  z-index: 9999;
+}
+.coming-soon h2{
+  text-align: center;
+  font-size: 50px;
+  transform:  rotate(-45deg) translateX(-19%) translateY(130%);
+  color: #ffb606;
+}
+
+
+
+.header-account-login .pop .bp_components .menupop:not(#wp-admin-bar-my-account) > .ab-sub-wrapper:before{
+  background: #ffb606 !important;
+}
+.header-inner .right-col .header-notifications a.notification-link,
+.header-inner .right-col .header-account-login a.user-link{
+  color: #fff !important;
+}
+.header-navigation ul li a{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.wpcs_product_carousel_slider .product_image_container .product_thumb_link img{
+  transition: none !important;
+  transform: none !important;
+}
+@media screen and (max-width: 1024px) {
+  .equal-height-flex section.vc_cta3-container.vc_cta3-size-sm{
+    width: 100%;
+  }
+}
+.equal-height-flex .vc_cta3-content-header h2{
+  font-size: 30px !important;
+}
+.equal-height-flex .vc_cta3_content-container button{
+  font-size: 25px !important;
+  font-weight: 700;
+}
+#pmpro_levels_pricing_tables{
+  align-content: center;
+  justify-content: center;
+}
+.pmpro_levels_pricing_table{
+  width: 40%;
+}
+
+.pmp-column-1 .odd:nth-of-type(3),
+.pmp-column-1 .pmpro_levels_pricing_table:nth-of-type(4), 
+.pmp-column-2 .odd:nth-of-type(1),
+.pmp-column-2 .pmpro_levels_pricing_table:nth-of-type(2),
+.pmp-column-2 .nav-previous{
+  display: none !important;
+}
+@media only screen and (max-width: 1024px) {
+  .pmpro_levels_pricing_table{
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .pmpro_levels_pricing_table{
+    width: 100%;
+  }
+  .pmp-column-1 .vc_custom_heading,
+  .pmp-column-2 .vc_custom_heading{
+    font-size: 1.7em !important;
+  }
+}
+.sensei-content, #activate-page, body.page:not(.buddypress) .site-content article:not(.comment), body.single:not(.buddypress):not(.bbpress) .site-content article:not(.comment){
+  padding: 0 15px 36px;
+}
+
+.single-sfwd-courses .course-header .content > span{
+  border-bottom: 1px solid #000;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.single-sfwd-courses article header h1{
+  color: #000;
+}
+.single-sfwd-courses .course-header .progress{
+  color: #000;
+  font-weight: bold;
+}
+body.home .vc_column_container>.vc_column-inner{
+  padding-left: 0;
+  padding-right: 0;
+}
+/*Home page slider*/
+body.home .home-row-flex .vc_col-sm-3{
+  visibility: hidden;
+}
+body.home .home-row-flex .vc_col-sm-6 > div{
+  padding-top: 0;
+  margin-top: -248px;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+body.home .home-row-flex .mega_info_box_2 .mega-info-header{
+  height: auto;
+  margin-right: 0;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2{
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  overflow: hidden;
+  padding: 25px;
+  transition: all .3s;
+  width: calc(33.3333% - ( 0.666666666667 * 4px ) );
+  transition: all .3s;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2:hover{
+  background: #000;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2:hover img{
+  max-width: 110%;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 img{
+  padding-bottom: 0;
+  transition: all .3s;
+}
+body.home .home-row-flex .mega_info_box_2 .mega-info-footer{
+  margin-left: 15px;
+  width: 75%;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 h3{
+  color: #fff;
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 .mega-info-btn{
+  background: transparent;
+  color: #ffb606;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+}
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 .mega-info-btn:after{
+  content: "\f054";
+  display: inline-block;
+  font-size: 14px;
+  font-family: FontAwesome;
+  padding-left: 15px;
+}
+
+/*body.home .home-row-flex .vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat{
+  padding: 7px 0;
+  overflow: hidden;
+  min-height: 150px;
+}
+body.home .home-row-flex .vc_cta3-content-header h2{
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 30px;
+  margin: 20px 0 10px;
+  padding-right: 42px;
+}
+body.home .home-row-flex .vc_cta3-content > p > img{
+  margin: 0;
+  transition: all .3s;
+  margin-top: 28px;
+}
+body.home .home-row-flex{}
+body.home .home-row-flex{}
+body.home .vc_column_container>.vc_column-inner{
+  padding-left: 0;
+  padding-right: 0;
+}
+#content .wpb_text_column :last-child,
+.wpb_text_column :last-child{
+  margin-bottom: 0;
+}
+.vc_general.vc_cta3.vc_cta3-actions-bottom .vc_cta3-content{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 60%;
+}
+.vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat .vc_cta3-content-header{
+
+}
+.vc_general.vc_cta3 .vc_cta3-content > p{
+  padding: 0 15px 15px;
+  margin: 0;
+  max-width: 135px;
+}
+
+.vc_general.vc_cta3 .vc_cta3-actions{
+
+}
+*/
+
+
+.learndash .entry-header .entry-title{
+  display: block;
+}
+.learndash .entry-header > span{
+  display: none !important;
+}
+
+
+/*Blog*/
+.table-cell.entry-meta{
+  background: rgba(0,0,0,0.6);
+  max-width: 50%;
+  padding: 15px;
+}
+
+/*PMP Upgrade*/
+.pmpro_actionlinks > a,
+.pmpro_actionlinks > a:hover{
+  background: #ffb606;
+  color: #000;
+  display: inline-block;
+  font-size: 1.3em;
+  padding: 5px 10px !important;
+}
+#pmpro_account-membership td{
+  font-size: 1.5em;
+}
+#pmpro_social_login{
+  display: none;
+}
+.button-social-login{
+  margin: 10px !important;
+}
+.button-social-login:first-of-type{
+  margin-left: 0 !important;
+}
+/*Product page*/
+.single-product form.cart{
+  max-width: 17%;
+}
+.single-product .product_meta{
+  display: none;
+}
+
+/*Buddy panel icons(Sidebar)*/
+.menu-panel #header-menu > ul > li > a:before,
+.menu-panel #nav-menu > ul > li > a:not(.open-submenu):before{
+  font-size: 20px;
+}
+
+.menu-panel #header-menu > ul > li.bp-activity-nav > a:before,
+.menu-panel #nav-menu > ul > li.bp-activity-nav > a:not(.open-submenu):before,
+.menu-panel #wp-admin-bar-my-account-activity > .ab-item:before{
+  content: "\f08d";
+}
+.bp-photos-nav a:before{
+  content: "\f030";
+}
+.icon-star a:before{
+  content: "\f005";
+}
+.menu-panel #header-menu > ul > li.member-directory > a:before,
+.menu-panel #nav-menu > ul > li.member-directory > a:not(.open-submenu):before{
+  content: "\f2b9";
+}
+
+.menu-panel #header-menu > ul > li.news-feed > a:before,
+.menu-panel #nav-menu > ul > li.news-feed > a:not(.open-submenu):before{
+  content: "\f0ac";
+}
+
+.menu-panel #header-menu > ul > li.forums > a:before,
+.menu-panel #nav-menu > ul > li.forums > a:not(.open-submenu):before{
+  content: "\f086";
+}
+/*Pricing tables*/
+.pmp-levels-membership{
+  margin-top: -150px;
+}
+@media only screen and (max-width: 768px) {
+  .pmp-levels-membership{
+    margin-top: 0px;
+  }
+}
+.price-table-main .price-table-items.signup{
+  padding: 0;
+}
+.price-table-columns .signup a{
+  display: block;
+  padding: 15px;
+}
+/*.pricing-header .price-area strong.free, */
+.active .pricing-header .price-area strong span{
+  color: #333333;
+}
+.pricing-header .price-area strong span{
+  color: #ffb606;
+}
+
+@media only screen and (max-width: 768px) {
+  .pricing-header .price-area strong.free{
+    color: #ffb606;
+  }
+  .active .pricing-header .price-area strong.free{
+    color: #333;
+  }
+}
+
+/*Woocommerce*/
+.woocommerce-checkout #payment{
+  background: transparent !important;
+}
+#product-10618 .subscription-details{
+  display: none;
+}
+
+/*Woocommerce Cart & Checkout*/
+body.woocommerce-cart .header-links,
+body.woocommerce-checkout .header-links,
+body.woocommerce-cart #left-panel,
+body.woocommerce-cart #secondary,
+body.woocommerce-checkout #left-panel{
+  display: none;
+}
+body.woocommerce-cart #content,
+body.woocommerce-checkout #content{
+  margin-top: 25px;
+}
+body.woocommerce-cart #primary,
+body.woocommerce-checkout #primary{
+  float: none;
+  margin: 0 auto;
+  width: 70%;
+}
+body.woocommerce-cart .woocommerce .col2-set .col-1, 
+body.woocommerce-checkout .col2-set .col-1{
+  float: none;
+  margin: 0 auto;
+}
+body.woocommerce-cart .woocommerce .col2-set .col-2, 
+body.woocommerce-checkout .col2-set .col-2{
+  float: none;
+  clear: both;
+  margin: 0 auto;
+}
+body.woocommerce-cart .entry-title,
+body.woocommerce-checkout .entry-title{
+  display: block;
+  text-align: center;
+}
+#order_review_heading,
+#order_review{
+  max-width: 48%;
+  margin: 0 auto;
+}
+#order_review_heading{
+  margin-top: 25px;
+}
+
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before{
+  display: none;
+}
+
+/*Iframe video on courses page*/
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 75% !important;
+  height: 75% !important;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  #order_review{
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  #order_review_heading{
+    margin: 25px 0 0;
+  }
+}
+.woocommerce-checkout #payment div.payment_box:after{
+  top: 0 !important;
+}
+/*Hiding add to cart button for just courses*/
+.product_cat-courses .add_to_cart_button,
+.product_cat-courses form.cart{
+  display: none !important;
+}
+
+body.logged-in .product_cat-courses .button.add_to_cart_button,
+body.logged-in button.single_add_to_cart_button, 
+body.logged-in .product_cat-courses form.cart{
+  display: block !important;
+}
+
+/*Buddypress hiding counts*/
+.header-account-login .pop #dashboard-links .menupop a span,
+.header-account-login .pop ul > li > .ab-sub-wrapper > ul li a span,
+#buddypress div#item-nav .item-list-tabs ul li a span {
+  display: none;
+}
+
+.bb-user-notifications .bb-message-link{
+  color: #ffb606 !important;
+}
+
+/*--------------------------------------------------------------
+2.0 - Responsive media queries (mobile styles)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.1 - MAXIMUM width of 720 pixels (phones landscape)
+--------------------------------------------------------------*/
+@media screen and (max-width: 1440px) {
+  .home-row-flex .vc_col-sm-6{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-navigation > div > ul{
+    display: flex;
+  }
+  body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 h3{
+    font-size: 1.5em;
+  }
+  .header-inner .left-col .header-navigation ul li a{
+    font-size: 12px;
+  }
+  #cart-nav-wrap > a{
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+    .menu-panel #header-menu > ul li a:before,
+    .menu-panel #nav-menu > ul > li > a:not(.open-submenu):before,
+    .menu-panel .screen-reader-shortcut:before,
+    .menu-panel .bp_components ul li ul li > .ab-item:before{
+      display: none;
+    }
+    .menu-panel ul li > a span{
+      left: 6px;
+      top: 10px;
+    }
+}/* don't delete this closing bracket */
+
+@media screen and (max-width: 768px){
+  body:not(.left-menu-open) #right-panel-inner {
+    margin-left: 0;
+  }
+  
+}
+@media only screen and (max-width: 879px) {
+  body.home .home-row-flex{
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+2.2 - MAXIMUM width of 350 pixels (phones portrait)
+--------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
+    width: 100%;
+  }
+  #cart-nav-wrap{
+    right: 15%;
+  }
+  .coming-soon .coverage{
+    width: 99%;
+  }
+  .wpb_row .woocommerce ul.products li.product a img{
+    max-width: 47%;
+    margin: 0 auto;
+  }
+}/* don't delete this closing bracket */
+
+@media screen and (max-width: 750px) {
+  .coming-soon h2{
+    font-size: 2em;
+    transform: rotate(-45deg) translateX(-26%) translateY(130%);
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .coming-soon h2{
+    font-size: 3em;
+    transform: rotate(-45deg) translateX(-26%) translateY(130%);
+  }
+}
+
+
+/*--------------------------------------------------------------
+2.3 - MINIMUM width of 721 pixels (tablets+)
+--------------------------------------------------------------*/
+@media screen and (min-width: 721px)  {
+  #cart-nav-wrap{
+    right: 9%;
+  }
+  .coming-soon h2{
+    font-size: 40px;
+    transform:  rotate(-45deg) translateX(-19%) translateY(115%);
+  }
+
+}/* don't delete this closing bracket */
+
+
+
+
+
+/*--------------------------------------------------------------
+2.4 - MINIMUM width of 1040 pixels (desktops and laptops)
+--------------------------------------------------------------*/
+@media screen and (max-width: 1440px)  {
+  body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2{
+    width: calc(28.3333% - ( 0.666666666667 * 4px ) );
+  }
+}
+@media screen and (min-width: 1040px)  {
+  
+  body.home .wpcs_product_carousel_slider .another_carousel_header i{
+    top: 33%;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .header-navigation ul li a{
+    font-size: 15px;
+  }
+  .pricing-header{
+    min-height: 111px;
+  }
+
+}/* don't delete this closing bracket */
+
+/*Iframe for courses*/
+@media only screen and (min-width: 1440px) {
+  #auto-iframe{
+    /*min-height: 800px;    */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #auto-iframe{
+    /*min-height: 500px;    */
+  }
+}
+
+/*Site wide message*/
+div#sitewide-notice div#message p{
+  display: block;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+
+
+/*Custom CSS from back-end*/
+.vc_row.vc_row-flex {
+    box-sizing: border-box;
+    display: inline;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.site-header .search-form {
+    display: none;
+}
+
+.page-template-page-no-buddypanel[data-header="1"] #masthead #searchsubmit:hover, .page-template-page-no-buddypanel .header-notifications a.notification-link:hover, .page-template-page-no-buddypanel .header-account-login > a:hover, .page-template-page-no-buddypanel .header-notifications .pop a:hover, .page-template-page-no-buddypanel .header-navigation #header-menu > ul > li > a:hover {
+    color: #ffb606;
+}
+
+img.alignleft {
+    margin: -16px 46px 14px 0;
+}
+
+.entry-post-thumbnail img {
+    position: relative;
+    top: 73%;
+}
+
+.vc_sep_width_100, .wpb_single_image img.vc_img-placeholder {
+    width: 24%;
+}
+
+.widget-area .widget.widget_buddyboss_recent_post ul li a.category-link {
+    color: #ffb606;
+    display: block;
+}
+
+
+.header-account-login .pop .links > .current-menu-item > a, .header-account-login .pop .links > .current-menu-parent > a, .header-account-login .pop .bp_components ul li ul li.menupop.active > a {
+    color: BLACK;
+    background-color: #ffb606;
+}
+
+#switch_submit {
+    display: none;
+}
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+    margin-top: 20px;
+    display: none;
+}
+
+.entry-title {
+    margin-bottom: 20px;
+    display: none;
+}
+
+#item-header-content h1, .group-info li p:first-child, #item-statistics .numbers span p:first-child, header .page-title, header .main-title {
+    font-family: Arimo;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    display: none;
+}
+
+.vc_column_container>.vc_column-inner {
+    background-position: center;
+}
+
+body.home .equal-height-flex .vc_general.vc_cta3.vc_cta3-color-black.vc_cta3-style-flat {
+    min-height: 203px !important; 
+}
+
+body.home .equal-height-flex {
+    display: flex;
+    align-items: center;
+    margin-top: -343px;
+}
+
+.vc_custom_1527023440116 {
+    background-image: url(https://www.specialtactics.global/wp-content/uploads/2018/05/support-graphic-2.jpg?id=9895) !important;
+    background-position: 0px -359px;
+}
+
+.uo-grid-wrapper .grid-course h4 {
+    color: #ffb606 !important;
+}
+
+.uo-grid-wrapper .grid-course h4 {
+    width: 95% !important;
+}
+
+div#logo {
+    height: 84%;
+}
+
+.uo-grid-wrapper {
+    margin-left: 221px;
+}
+
+.home-page.woocommerce ul.products, .woocommerce-page ul.products {
+    transform: translate(26%, 1%);
+}
+
+.vc_btn3.vc_btn3-color-juicy-pink, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat {
+    color: white;
+    background-color: #ffb606;
+}
+
+.vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat:focus, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat:hover, .vc_btn3.vc_btn3-color-juicy-pink:focus, .vc_btn3.vc_btn3-color-juicy-pink:hover {
+    color: #ffb606;
+    background-color: white;
+}
+
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs {
+    clear: both;
+    display: none;
+}
+
+
+.vc_btn3.vc_btn3-size-lg {
+    font-size: 34px;
+    padding: 18px 25px;
+    font-weight: 600;
+}
+
+.woocommerce-tabs h2, .upsells.products h2, .related.products h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.woocommerce div.product span.price, .woocommerce div.product p.price {
+    color: #ffb606;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.woocommerce-info {
+    border-top-color: #1e85be;
+    display: none;
+}
+#post-9284 .woocommerce .products ul, #post-9284 .woocommerce ul.products {
+    display: none;
+}
+
+div.wpcf7 {
+    padding-left: 130px;
+}
+
+.vc_btn3.vc_btn3-size-lg .vc_btn3-icon {
+    font-size: 34px;
+}
+
+.vc_btn3.vc_btn3-size-md {
+    font-size: 18px;
+    padding: 14px 20px;
+}
+
+.entry-content h4, .comment-content h4 {
+    font-size: 22px;
+}
+
+.group-info li p:nth-child(2), #item-statistics .numbers span p:nth-child(2) {
+    display: none;
+}
+
+body.activity:not(.bp-user) .item-list-tabs ul li.selected a, .dir-form .item-list-tabs ul li.selected a {
+    color: #ffb606 !important;
+}
+
+#buddypress #message.info p, #buddypress div#message.updated p {
+    background-color: #ffb606;
+    color: black;
+}
+
+#buddypress div#item-header h2 {
+    font-size: 28px;
+    font-variant-caps: all-small-caps;
+}
+
+#buddypress div#item-header #item-header-content .sep {
+    display: none;
+}
+
+.price-table-main .price-table-items.data {
+  font-size: 20px;
+}
+
+.price-table-main .price-table-items.header {
+  font-size: 32px;
+}
+
+.price-table-main .price-table-items.price {
+  font-size: 33px;
+}
+
+.price-table-main .price-table-items.price span{
+  font-size: 22px;
+}
+
+.price-table-main .price-table-items.data {
+    font-size: 16px;
+}
+
+.price-table-main .price-table-items.ribbons {
+    background: none repeat scroll 0 0 #737373 !important;
+}
+
+.price-table-main .price-table-items.header {
+    background: none repeat scroll 0 0 #737373!important;
+}
+
+.pricing-header .price-area strong.free, .pricing-header .price-area strong span {
+    font-size: 42px;
+    color: #ffb606;
+}
+
+.pricing-header .price-area strong {
+    font-size: 14px;
+}
+
+.uo-grid-wrapper .grid-course h4 {
+    width: 100% !important;
+}
+
+body.home .home-row-flex .vc_col-sm-6 .wpb_wrapper .mega_info_box_2 h3 {
+    font-size: 33px !important;
+}
+
+.pricing-header .price-area strong.free {
+    padding-bottom: 19px;
+}
+
+.vc_grid.vc_grid-owl-theme.vc_grid-gutter-30px .vc_grid-owl-nav .vc_grid-owl-next, .vc_grid.vc_grid-owl-theme.vc_grid-gutter-30px .vc_grid-owl-nav .vc_grid-owl-prev {
+    margin-top: -64.5px;
+}
+
+.body.logged-in .course-inner .price {
+    background: #ffb606 !important;
+    font-size: 19px !important;
+}
+
+.body.logged-in #ribbon {
+    background-color: #ffb606 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+.course-inner .price {
+    font-size: 19px !important;
+    background: #ffb606 !important;
+}
+
+#ribbon {
+    background-color: #ffb606 !important;
+    box-shadow: 0px 0px 0px #ffb606 !important ;
+    font-size: 19px !important;
+}
+
+.wpb_row .woocommerce ul.products li.product .price .amount {
+    font-size: 30px;
+    color: #ffb606;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+    font-size: 20px;
+}
+
+.course-inner .price::before {
+    border-top: 4px solid #ffb606 !important;
+    border-right: 4px solid #ffb606 !important;
+}
+
+#ribbon:after {
+    border-color: #ffb606 #ffb606 transparent transparent !important;
+}
+
+.site-header .btn-elite {
+    border-radius: 0px !important;
+}
+
+nav.navigation.post-navigation .nav-links .nav-previous:before, nav.navigation.post-navigation .nav-links .nav-next:after, .bp-learndash-activity h4 i.fa-spinner, .bp-sensei-activity h4 i.fa-spinner, .bp-user.achievements #item-body > #subnav li.current a, #content .woocommerce-message .wc-forward, .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a:before, #learner-info .my-messages-link:before, .post-type-archive-lesson #module_stats span, .sensei-course-participants, .nav-previous .meta-nav:before, .nav-prev .meta-nav:before, .nav-next .meta-nav:before, #my-courses .meter-bottom > span > span, #my-courses section.entry span.course-lesson-progress, .quiz form ol#sensei-quiz-list li>span span, .module-archive #module_stats span, .widget_course_progress .module header h2 a:hover, #main .widget_course_progress .course header h4 a:hover, .course-statistic, #post-entries a:hover, #main .course-container .sensei-course-meta .course-author a, #main .course .sensei-course-meta .course-author a, .course-inner h2 a:hover, .menu-toggle i {
+    color: white !important;
+}
+
+#members-directory-form #members-group_leader, 
+#members-directory-form #members-student,
+#members-directory-form #members-student {
+    display: none;
+}
+
+.woocommerce ul#shipping_method li label {
+    font-size: 17px;
+}
+
+#add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th {
+    font-size: 15px !important;
+}
+
+/*Notes position*/
+.nt-note-wrapper, 
+.nt-note-tab{
+  left: 3%;
+  width: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .nt-note-wrapper, 
+  .nt-note-tab{
+    left: 0;
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .nt-note-wrapper, 
+  .nt-note-tab{
+    width: 50px;
+  }
+  .nt-note-tab span{
+    display: none;
+  }
+}
