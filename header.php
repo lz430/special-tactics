@@ -23,7 +23,7 @@
 		<!-- BuddyPress and bbPress Stylesheets are called in wp_head, if plugins are activated -->
 		<?php wp_head(); ?>
 
-		<meta name="google-site-verification" content="kZznRIVf6iA9dy1frWlPTgoqRlUCWK_s-dZHjmyGB6E" /> 
+		<meta name="google-site-verification" content="wR9E91XMcYFfow8XyUa6Me9RUqGVZxKkwrAu1Kqe3KU" /> 
 		
 		<!-- Facebook Pixel Code -->
 		<script>
@@ -44,17 +44,6 @@
 			&noscript=1"/>
 			</noscript>
 		<!-- End Facebook Pixel Code -->
-
-		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-102594572-2');
-		</script>
-		
 	</head>
 
 	<?php
@@ -65,8 +54,6 @@
 
     $header_style = boss_get_option('boss_header');
 //    $boxed	 = 'fluid';
-
-	$current_user->membership_level = pmpro_getMembershipLevelForUser($current_user->ID);
 	?>
 
 	<body <?php body_class(); ?> data-logo="<?php echo $logo; ?>" data-inputs="<?php echo $inputs; ?>" data-rtl="<?php echo ($rtl) ? 'true' : 'false'; ?>" data-header="<?php echo $header_style; ?>">

@@ -54,6 +54,7 @@
 
 
   /****************************** CUSTOM FUNCTIONS ******************************/
+
   // Add your own custom functions here
 
   function wpb_image_editor_default_to_gd( $editors ) {
@@ -239,7 +240,7 @@
   }
 */
 
- // Buddypress member types on register
+  // Buddypress member types on register
   // Src: https://gist.github.com/strangerstudios/0086715ba551238b958f
   function changeMemberType($level_id, $user_id){
     //get user object
@@ -254,4 +255,20 @@
     }
   }
   add_action("pmpro_after_change_membership_level", "changeMemberType", 10, 2);
-?>
+
+function boss_bp_is_group_forum() {
+      $retval = false;
+
+      // At a forum URL.
+      if ( bp_is_single_item() && bp_is_groups_component() && bp_is_current_action( 'forum' ) ) {
+          $retval = true;
+
+          // If at a forum URL, set back to false if forums are inactive, or not
+          // installed correctly.
+          if ( ! bp_is_active( 'forums' ) || ! bp_forums_is_installed_correctly() ) {
+              $retval = false;
+          }
+      }
+
+      return $retval;
+  }
