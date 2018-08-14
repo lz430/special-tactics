@@ -25,5 +25,13 @@
       // $('#pmpro_levels_pricing_tables > .pmpro_levels_pricing_table:nth-child(2)').after(pmpHeadingText);
 
 
+      // Hide friendship accept/reject buttons when the other is clicked
+      $('.generic-button > .accept').on('click', function(){
+        $(this).parent().parent().find('.reject').hide();
+      });
+
+      $('.generic-button > .reject').on('click', function(){
+        $(this).parent().parent().find('.accept').hide();
+      });
+
     }) ;
-    

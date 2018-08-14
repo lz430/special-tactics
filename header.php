@@ -25,6 +25,9 @@
 
 		<meta name="google-site-verification" content="wR9E91XMcYFfow8XyUa6Me9RUqGVZxKkwrAu1Kqe3KU" /> 
 		
+		
+
+
 		<!-- Facebook Pixel Code -->
 		<script>
 			!function(f,b,e,v,n,t,s)
@@ -37,13 +40,13 @@
 			'https://connect.facebook.net/en_US/fbevents.js');
 			 fbq('init', '1948214622081456'); 
 			fbq('track', 'PageView');
-			</script>
-			<noscript>
-			 <img height="1" width="1" 
-			src="https://www.facebook.com/tr?id=1948214622081456&ev=PageView
-			&noscript=1"/>
-			</noscript>
+		</script>
+		<noscript>
+			 <img height="1" width="1" src="https://www.facebook.com/tr?id=1948214622081456&ev=PageView&noscript=1"/>
+		</noscript>
 		<!-- End Facebook Pixel Code -->
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/867246e249b67475bd1a0f5b6/3cf81ecdde96501624c6c667e.js");</script>
+
 	</head>
 
 	<?php
@@ -57,6 +60,15 @@
 	?>
 
 	<body <?php body_class(); ?> data-logo="<?php echo $logo; ?>" data-inputs="<?php echo $inputs; ?>" data-rtl="<?php echo ($rtl) ? 'true' : 'false'; ?>" data-header="<?php echo $header_style; ?>">
+		<script async	src="https://www.googletagmanager.com/gtag/js?id=UA-102594572-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [ ] ;
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag( 'js', new Date () ) ;
+		  gtag( 'config', 'UA-102594572-2');
+		  gtag( 'config', '815919970');
+		</script>
+
 
 		<?php do_action( 'buddyboss_before_header' ); ?>
 

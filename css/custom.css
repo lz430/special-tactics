@@ -483,6 +483,25 @@ body.home .vc_column_container>.vc_column-inner{
 .menu-panel #nav-menu > ul > li.forums > a:not(.open-submenu):before{
   content: "\f086";
 }
+.menu-panel #header-menu > ul > li.groups > a:before,
+.menu-panel #nav-menu > ul > li.groups> a:not(.open-submenu):before{
+  content: "\f1b3";
+}
+.menu-panel #header-menu > ul > li.course-notes > a:before, 
+.menu-panel #nav-menu > ul > li.course-notes > a:not(.open-submenu):before{
+  content: "\f044";  
+  font-size: 26px;
+}
+
+
+/*Buddypanel active page*/
+#left-panel #menu-main-sidebar .current-menu-item a{
+  background: #ffb606;
+  color: #fff;
+}
+#left-panel #menu-main-sidebar .current-menu-item a:before{
+  color: #fff !important;
+}
 /*Pricing tables*/
 .pmp-levels-membership{
   margin-top: -150px;
@@ -1094,4 +1113,14 @@ nav.navigation.post-navigation .nav-links .nav-previous:before, nav.navigation.p
   .nt-note-tab span{
     display: none;
   }
+}
+
+/*Hiding Activity feed friend requests*/
+#activity-stream .friendship_created.activity-item{
+  display: none !important;
+}
+
+/*Login styles*/
+#login form p.submit input{
+  text-shadow: none;
 }
