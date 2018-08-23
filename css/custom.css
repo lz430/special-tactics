@@ -1124,3 +1124,23 @@ nav.navigation.post-navigation .nav-links .nav-previous:before, nav.navigation.p
 #login form p.submit input{
   text-shadow: none;
 }
+
+/*Styles for membership checkout page*/
+body.pmpro-checkout #right-panel-inner{
+  background: #fff;
+}
+body.pmpro-checkout #main-wrap{
+  max-width: 980px;
+  margin: 0 auto 50px;
+  border: 1px solid #ccc;
+  padding: 50px;
+}
+body.pmpro-checkout .entry-title{
+  display: block;
+  font-size: 3em;
+  text-align: center;
+  border-bottom: 1px solid #ffb606;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  word-wrap: normal;
+}
