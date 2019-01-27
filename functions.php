@@ -47,8 +47,19 @@
     /*
      * Styles & scripts
      */
-    wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri().'/css/custom.css' );
-    wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
+    $rand = rand( 1, 99999999999 );
+    wp_enqueue_style( 'font-overpass', 'https://fonts.googleapis.com/css?family=Overpass', '', $rand); 
+    wp_enqueue_style( 'youzer-override', get_stylesheet_directory_uri().'/css/youzer-overrides.css', '', $rand);
+    wp_enqueue_style( 'boss-child-custom', get_stylesheet_directory_uri().'/css/custom.css', '', $rand);
+    
+    wp_register_script( 'child-script', get_stylesheet_directory_uri() . '/js/custom.js', array(), $rand, true );
+
+    $is_activity_dir_page = bp_is_activity_directory();
+    $translation_array = array(
+        'is_activity_dir' => $is_activity_dir_page,
+    );
+    wp_localize_script( 'child-script', 'js_data', $translation_array );
+    wp_enqueue_script( 'child-script' );
   }
   add_action( 'wp_enqueue_scripts', 'boss_child_theme_scripts_styles', 9999 );
 
@@ -150,11 +161,11 @@
 
   // Paid memberships pro hook to add social login on checkout
   // echo do_shortcode( '[woocommerce_social_login_buttons return_url="http://dev.specialtactics.global/membership-account/membership-checkout"]' );
-  function pmp_social_login() {
-    $previousPage = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $previousPage . '"]' );
-  }
-  add_action( 'pmpro_checkout_after_level_cost', 'pmp_social_login' );
+  // function pmp_social_login() {
+  //   $previousPage = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  //   echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $previousPage . '"]' );
+  // }
+  // add_action( 'pmpro_checkout_after_level_cost', 'pmp_social_login' );
 
   // Login page styles
   add_action( 'login_enqueue_scripts', 'wpse_login_styles' );
@@ -162,18 +173,18 @@
       wp_enqueue_style( 'wpse-custom-login', get_stylesheet_directory_uri() . '/css/style-login.css' );
   }
 
-  // Adding social login to WP login form
-  function login_form_social_login() {
-    $previousPage = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $defaultPage = "https://specialtactics.global";
+  // // Adding social login to WP login form
+  // function login_form_social_login() {
+  //   $previousPage = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  //   $defaultPage = "https://specialtactics.global";
 
-    if ( is_user_logged_in() ) {
-      echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $previousPage . '"]' );
-    } else {
-      echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $defaultPage . '"]' );
-    }
-  }
-  add_action('login_form', 'login_form_social_login');
+  //   if ( is_user_logged_in() ) {
+  //     echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $previousPage . '"]' );
+  //   } else {
+  //     echo do_shortcode( '[woocommerce_social_login_buttons return_url="' . $defaultPage . '"]' );
+  //   }
+  // }
+  // add_action('login_form', 'login_form_social_login');
 
 
   // Logout Redirect
@@ -271,4 +282,102 @@ function boss_bp_is_group_forum() {
       }
 
       return $retval;
-  }
+}
+
+// Enable visual editor for BBpress
+function bbp_enable_visual_editor( $args = array() ) {
+  $args['tinymce'] = true;
+  $args['quicktags'] = false;
+  $args['teeny'] = true;
+  return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
+
+
+function buddyboss_remove_boss_main_script(){
+    wp_dequeue_script( 'buddyboss-main' );
+    wp_dequeue_script( 'boss-main-min' );
+}
+add_action( 'wp_enqueue_scripts', 'buddyboss_remove_boss_main_script', 999 );
+
+function buddyboss_scripts_styles_child_customize(){
+    global $bp;
+    /**
+     * Assign the Boss version to a var
+     */
+    $theme       = wp_get_theme( 'boss' );
+    $boss_version  = $theme[ 'Version' ];
+    // Used in js file to detect if we are using only mobile layout
+    $only_mobile = false;
+    // Main stylesheet
+    if ( !is_admin() ) {
+        // Switch between mobile and desktop
+        if ( isset( $_COOKIE[ 'switch_mode' ] ) && ( boss_get_option( 'boss_layout_switcher' ) ) ) {
+            if ( $_COOKIE[ 'switch_mode' ] == 'mobile' ) {
+                $only_mobile = true;
+            } else {
+            }
+            // Defaults
+        } else {
+            if ( is_phone() ) {
+                $only_mobile = true;
+            } elseif ( wp_is_mobile() ) {
+                if ( boss_get_option( 'boss_layout_tablet' ) == 'desktop' ) {
+                } else {
+                    $only_mobile = true;
+                }
+            } else {
+                if ( boss_get_option( 'boss_layout_desktop' ) == 'mobile' ) {
+                    $only_mobile = true;
+                } else {
+                }
+            }
+
+        }
+
+    }
+    /*
+     * Adds mobile JavaScript functionality.
+     */
+    if ( !is_admin() ) {
+        wp_enqueue_script( 'idangerous-swiper', get_template_directory_uri() . '/js/swiper.jquery.js', array( 'jquery' ), '3.4.2', true );
+    }
+
+    $user_profile = null;
+
+    if ( is_object( $bp ) && is_object( $bp->displayed_user ) && !empty( $bp->displayed_user->domain ) ) {
+        $user_profile = $bp->displayed_user->domain;
+    }
+
+    /*
+     * Adds UI scripts.
+     */
+    if ( !is_admin() ) {
+        $translation_array = array(
+            'only_mobile'      => $only_mobile,
+            'comment_placeholder'  => __( 'Your Comment...', 'boss' ),
+            'view_desktop'       => __( 'View as Desktop', 'boss' ),
+            'view_mobile'      => __( 'View as Mobile', 'boss' )
+        );
+        $buddyboss_js_vars = array(
+            'select_label'    => __( 'Show:', 'boss' ),
+            'post_in_label'   => __( 'Post in:', 'boss' ),
+            'tpl_url'     => get_template_directory_uri(),
+            'child_url'     => get_stylesheet_directory_uri(),
+            'user_profile'    => $user_profile,
+            'excluded_inputs' => boss_get_option('boss_excluded_inputs'),
+            'days'        => array( __( 'Monday', 'boss' ), __( 'Tuesday', 'boss' ), __( 'Wednesday', 'boss' ), __( 'Thursday', 'boss' ), __( 'Friday', 'boss' ), __( 'Saturday', 'boss' ), __( 'Sunday', 'boss' ) )
+        );
+
+        $buddyboss_js_vars = apply_filters( 'buddyboss_js_vars', $buddyboss_js_vars );
+
+        /* Adds custom BuddyBoss JavaScript functionality. */
+
+        wp_register_script( 'buddyboss-main-child', get_stylesheet_directory_uri() . '/js/buddyboss.js', array( 'jquery' ), $boss_version, true );
+
+        wp_localize_script( 'buddyboss-main-child', 'translation', $translation_array );
+        wp_localize_script( 'buddyboss-main-child', 'BuddyBossOptions', $buddyboss_js_vars );
+        wp_enqueue_script( 'buddyboss-main-child' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'buddyboss_scripts_styles_child_customize', 999 );

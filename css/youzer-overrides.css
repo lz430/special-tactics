@@ -1,0 +1,204 @@
+.yz-content #yz-wall-nav .item-list-tabs{
+ border: none !important;
+}
+
+.yz-content #yz-wall-nav ul li{
+  width: auto !important;
+  border: none !important;
+}
+
+.yz-content #yz-wall-nav li a span{
+  position: relative !important;
+  top: auto !important;
+}
+.yz-content #yz-wall-nav ul li#activity-filter-select{
+ padding-top: 5px !important;
+}
+
+.yz-wall-opts-item input[type="radio"].styled:checked + label::before, .yz-wall-opts-item input[type="radio"].styled + label::before{
+ display: none !important;
+ visibility : hidden !important;
+}
+
+.yz-wall-opts-item input[type="radio"].styled + label{
+  left: 0px !important;
+}
+.yz-main-column .activity{
+  padding: 0px !important;
+}
+.youzer .activity-meta a{
+ width: auto !important;
+}
+
+.youzer .activity-comments li {
+    font-size: 13px !important;
+    font-weight: bold !important;
+    color: #939ba3 !important;
+}
+.youzer .activity-meta .yz-post-liked-by a{
+ width: 35px !important;
+}
+
+.youzer div.item-list-tabs li a{
+ background: none !important;
+ border-bottom:none !important;
+}
+
+#buddypress #send_message_form.standard-form div.submit{
+  float: none !important;
+  display: inline-block;
+}
+input#save_as_draft{
+ float: none !important;
+  display: inline-block;
+border: none;
+font-size: 12px;
+font-weight: 600;
+line-height: 19px;
+padding: 15px 35px;
+letter-spacing: .05em;
+text-transform: uppercase;
+}
+
+#yz-members-list li.yz-show-cover .yzm-user-data .item{
+ display: inherit !important;
+}
+
+#yz-members-directory {
+    max-width: 100%;
+}
+
+.activity-meta  a.button {
+ background: none !important;
+ color: #939ba3 !important;
+}
+
+.yz-directory-filter .item-list-tabs li#group-create-nav a::before {
+    content: "\f303";
+    font-weight: 600;
+}
+
+.item-list li .item, .item-list li .action {
+    display: inline !important;
+}
+.item-list li .item-avatar{
+ display: table-cell;
+}
+
+.yz-checkbox-field input[type="checkbox"].styled + label{
+
+}
+
+.yz-checkbox-field input[type="checkbox"].styled + label::before{
+  top: 2px;
+  left: 2px;
+  width: auto;
+  height: auto;
+ border-radius: 60px;
+}
+
+.yz-checkbox-field input[type="checkbox"].styled:checked + label::after{
+  content: "";
+  top: 5px;
+  left: 4px;
+}
+
+#buddypress .notifications tbody td{
+   text-align: center !important;
+}
+
+.yz_cs_checkbox_field input[type="checkbox"].styled + strong::before, .yz_cs_checkbox_field input[type="checkbox"].styled + strong::after{
+  display: none !Important;
+  visibility: hidden !important;
+}
+
+.yz_cs_checkbox_field input[type="checkbox"].styled{
+    position:absolute;
+}
+
+body.bp-user.photos .yz-wall-opts-item {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: -20px;
+    font-size: 16px;
+}
+
+body.bp-user.photos .yz-wall-opts-item input[type="radio"].styled + label i{
+  margin-right: 7px !Important;
+}
+
+body.bp-user.photos .yz-wall-actions{
+ margin-bottom: 10px;
+}
+
+body.bp-user.photos .youzer textarea{
+ width: 100% !important;
+}
+body.bp-user.photos .yz-wall-upload-btn {
+    margin: 10px 0px;
+    display: block;
+}
+
+.is-mobile #buddypress div#subnav.item-list-tabs ul li.current a {
+    color: #ffb606 !important;
+}
+.yz-responsive-menu, .yz-responsive-menu:hover, .yz-responsive-menu.is-active{
+ background: transparent !important;
+}
+
+.is-mobile #buddypress div#subnav.item-list-tabs ul li a {
+    color: #898989 !important;
+}
+
+#buddypress #send-reply.standard-form div.submit{
+  float: none !important;
+ margin: 0px !important;
+}
+
+#buddypress #send-reply #send_reply_button{
+  margin-top:0px !important;
+}
+body.messages #send-reply .message-reply-content{
+  margin-bottom: 0px !important;
+}
+
+#send-reply .bbm-attachment-wrapper{
+margin-top:15px !important;
+}
+
+body.is-mobile input#save_as_draft{
+  width: 100% !important;
+}
+
+.youzer .activity-list > li.members.new_member{
+  display:none !important;
+  visibility: hiddend !important;
+}
+
+.youzer .activity-list > li.xprofile.updated_profile{
+  display:none !important;
+  visibility: hiddend !important;
+}
+#buddypress #activity-stream .acomment-options a, #buddypress #activity-stream .activity-meta .bp-secondary-action{
+  background: transparent !important;
+}
+
+.settings-sidebar .account-menus h2,
+.uk-option-item .option-infos label,
+.account-menus .yz-menu-head i,
+input[type="radio"].styled + span,
+input[type="radio"].styled + label,
+input[type="radio"].styled + strong,
+input[type="checkbox"].styled + span,
+input[type="checkbox"].styled + label,
+input[type="checkbox"].styled + strong{
+  color: #333;
+}
+input.cmn-toggle-round-flat:checked+label:after{
+  background-color: #ffb606;
+}
+
+.yza-change-photo i{
+  background-color: #ffb606;
+  background-image: none !important;
+}

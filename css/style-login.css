@@ -161,11 +161,13 @@ body.login #loginform input[type="password"]{
 #login form p.submit input {
     background-color: #4dcadd;
     border: none;
-    width: 100%;
+    font-size: 1.3em;
     -webkit-border-radius: 0;
     border-radius: 0;
     height: 37px;
     text-transform: uppercase;
+    text-shadow: none;
+    width: 100%;
 }
 
 #login form p.submit input:hover {
@@ -188,7 +190,9 @@ body.login #loginform input[type="password"]{
 #login form p.submit {
     zoom: 1;
 }
-
+.privacy-policy-link{
+    color: #ffb606;
+}
 .wp-social-login-connect-with {
     display: none;
 }
